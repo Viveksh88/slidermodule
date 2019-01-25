@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © 2015 etechcommerce. All rights reserved.
+ */
+?>
+<?php
+/**
+ * {{controller}} {{action}} template
+ *
+ * @var $block \Etech\Imageuploader\Block\Frontimage\Index
+ */
+
+$imageData =  $block->getCollection();
+foreach ($imageData->getData() as $key => $value) {
+   foreach ($value as $key2 => $value2) {
+      if($key2 == 'uploaded image'){
+        $image[] = $value2;
+      }  
+   }  
+}
+?>
+<div id="demo">
+    <div id="owl-img" class="best-seller-carousel">
+        <?php 
+        foreach ($image as $images):?>
+        <div class="item"><a href="<?= $block->getImageurl($images); ?>"><img a src="<?= /* @escapeNotVerified */$block->getImageurl($images);?>"></a></div> 
+        <?php endforeach;?>   
+    </div>
+</div>
+<script type="text/javascript">
+    requirejs(['jquery','owlcarousel'],function($,owl){
+        $('.best-seller-carousel').owlCarousel({
+            autoPlay: 3000, //3000 Set AutoPlay to 3 seconds
+            margin:5,
+            items : 1,
+            navRewind: true,
+            loop: true,
+            navigation : true,
+            navText: ["<span class='arrow-left'><img src='<?=$block->getViewFileUrl("Etech_Imageuploader::images/leftArrow.png");?>'></span>","<span class='arrow-right7'><img src='<?=$block->getViewFileUrl("Etech_Imageuploader::images/rightArrow.png");?>'></span>"],
+        });
+    });
+</script>

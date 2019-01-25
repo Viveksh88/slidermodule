@@ -1,0 +1,18 @@
+.owl-stage-outer{
+    height: 690px !important;
+}
+.owl-nav{
+    display: -webkit-box;
+    position: relative;
+    bottom: 384px;
+}
+.owl-prev{
+    display: block !important;
+    background-color: transparent !important;
+}
+.owl-next{
+    position: relative;
+    left: 93%;
+    display: block !important;
+    background-color: transparent !important;
+}

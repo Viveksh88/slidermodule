@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Etech. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Etech_Imageuploader::etech_imageupload_index" title="slider Image" module="Etech_Imageuploader"  sortOrder="20" dependsOnModule="Etech_Imageuploader" action="imageuploader/imageupload/index" resource="Etech_Imageuploader::etech_imageupload_index"/>
+<!--AddMenu-->
+    </menu>
+</config>
